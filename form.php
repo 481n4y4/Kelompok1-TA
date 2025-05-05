@@ -7,28 +7,32 @@ include "layout/header.php"
                 <div class="row g-4">
                     <div class="col-sm-12 col-xl-6">
                         <div class="bg-secondary rounded h-100 p-4">
-                            <h6 class="mb-4">Basic Form</h6>
+                            <h6 class="mb-4">Add Product</h6>
                             <form>
                                 <div class="mb-3">
-                                    <label for="exampleInputEmail1" class="form-label">Email address</label>
-                                    <input type="email" class="form-control" id="exampleInputEmail1"
+                                    <label for="exampleInputproduct" class="form-label">Product Name</label>
+                                    <input type="product" class="form-control" id="exampleInputproduct"
                                         aria-describedby="emailHelp">
-                                    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.
+                                    <div id="emailHelp" class="form-text">
                                     </div>
                                 </div>
                                 <div class="mb-3">
-                                    <label for="exampleInputPassword1" class="form-label">Password</label>
-                                    <input type="password" class="form-control" id="exampleInputPassword1">
+                                    <label for="exampleInputtotal" class="form-label">Total</label>
+                                    <input type="total" class="form-control" id="exampleInputtotal">
                                 </div>
-                                <div class="mb-3 form-check">
+                                <div class="mb-3">
+                                    <label for="exampleInputprice" class="form-label">Price</label>
+                                    <input type="price" class="form-control" id="exampleInputprice">
+                                </div>
+                                <!-- <div class="mb-3 form-check">
                                     <input type="checkbox" class="form-check-input" id="exampleCheck1">
                                     <label class="form-check-label" for="exampleCheck1">Check me out</label>
-                                </div>
-                                <button type="submit" class="btn btn-primary">Sign in</button>
+                                </div> -->
+                                <button type="submit" class="btn btn-primary">Add</button>
                             </form>
                         </div>
                     </div>
-                    <div class="col-sm-12 col-xl-6">
+                    <!-- <div class="col-sm-12 col-xl-6">
                         <div class="bg-secondary rounded h-100 p-4">
                             <h6 class="mb-4">Horizontal Form</h6>
                             <form>
@@ -290,7 +294,7 @@ include "layout/header.php"
                     </div>
                 </div>
             </div>
-            <!-- Form End -->
+            Form End -->
 
 <?php
 include "layout/footer.php"
