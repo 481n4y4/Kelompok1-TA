@@ -1,3 +1,9 @@
+<?php
+
+require_once 'config/controller.php';
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
