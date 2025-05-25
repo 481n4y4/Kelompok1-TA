@@ -5,13 +5,13 @@ include "layout/header.php"
 <!-- Form Start -->
 <div class="container-fluid pt-4 px-4">
                 <div class="row g-4">
-                    <div class="col-sm-12 col-xl-6">
+                    <div class="col-sm-12 col-xl-12">
                         <div class="bg-secondary rounded h-100 p-4">
-                            <h6 class="mb-4">Add Product</h6>
+                            <h6 class="mb-4">Tambah Barang</h6>
                             <form>
                                 <div class="mb-3">
-                                    <label for="exampleInputproduct" class="form-label">Product Name</label>
-                                    <input type="product" class="form-control" id="exampleInputproduct"
+                                    <label for="exampleInputbarang" class="form-label">Nama Barang</label>
+                                    <input type="barang" class="form-control" id="exampleInputbarang"
                                         aria-describedby="emailHelp">
                                     <div id="emailHelp" class="form-text">
                                     </div>
@@ -21,14 +21,14 @@ include "layout/header.php"
                                     <input type="total" class="form-control" id="exampleInputtotal">
                                 </div>
                                 <div class="mb-3">
-                                    <label for="exampleInputprice" class="form-label">Price</label>
-                                    <input type="price" class="form-control" id="exampleInputprice">
+                                    <label for="exampleInputharga" class="form-label">Harga</label>
+                                    <input type="harga" class="form-control" id="exampleInputharga">
                                 </div>
                                 <!-- <div class="mb-3 form-check">
                                     <input type="checkbox" class="form-check-input" id="exampleCheck1">
                                     <label class="form-check-label" for="exampleCheck1">Check me out</label>
                                 </div> -->
-                                <button type="submit" class="btn btn-primary">Add</button>
+                                <button type="submit" class="btn btn-primary">Tambah</button>
                             </form>
                         </div>
                     </div>
