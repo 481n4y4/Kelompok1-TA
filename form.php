@@ -5,7 +5,7 @@ if (isset($_POST['tambah'])) {
     if (tambahProduk($_POST)) {
         echo "<script>
                 alert('Data berhasil ditambahkan!');
-                window.location.href = 'tables.php';
+                window.location.href = 'table.php';
               </script>";
         exit;
     } else {
