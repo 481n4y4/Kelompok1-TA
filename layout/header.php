@@ -1,3 +1,9 @@
+<?php
+
+require_once 'config/controller.php';
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -69,6 +75,9 @@
                 </a>
                 <form class="d-none d-md-flex ms-4">
                     <input class="form-control bg-dark border-0" type="search" placeholder="Search">
+                </form>
+                <form>
+                    <a href="logout.php">Logout</a>
                 </form>
             </nav>
             <!-- Navbar End -->

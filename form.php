@@ -10,19 +10,32 @@ include "layout/header.php"
                             <h6 class="mb-4">Tambah Barang</h6>
                             <form>
                                 <div class="mb-3">
-                                    <label for="exampleInputbarang" class="form-label">Nama Barang</label>
-                                    <input type="barang" class="form-control" id="exampleInputbarang"
-                                        aria-describedby="emailHelp">
-                                    <div id="emailHelp" class="form-text">
-                                    </div>
+                                    <label for="exampleInputproduk" class="form-label">Nama Produk</label>
+                                    <input type="produk" class="form-control" id="exampleInputproduk">
                                 </div>
                                 <div class="mb-3">
-                                    <label for="exampleInputtotal" class="form-label">Total</label>
-                                    <input type="total" class="form-control" id="exampleInputtotal">
+                                    <label for="exampleInputkategori" class="form-label">Kategori</label>
+                                    <input type="kategori" class="form-control" id="exampleInputkategori">
                                 </div>
                                 <div class="mb-3">
-                                    <label for="exampleInputharga" class="form-label">Harga</label>
-                                    <input type="harga" class="form-control" id="exampleInputharga">
+                                    <label for="exampleInputstok" class="form-label">Stok</label>
+                                    <input type="stok" class="form-control" id="exampleInputstok">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="exampleInputhargabeli" class="form-label">Harga Beli</label>
+                                    <input type="hargabeli" class="form-control" id="exampleInputhargabeli">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="exampleInputhargajual" class="form-label">Harga Jual</label>
+                                    <input type="hargajual" class="form-control" id="exampleInputhargajual">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="exampleInputsupplier" class="form-label">Supplier</label>
+                                    <input type="supplier" class="form-control" id="exampleInputsupplier">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="exampleInputtanggal" class="form-label">Tanggal Masuk</label>
+                                    <input type="tanggal" class="form-control" id="exampleInputtanggal">
                                 </div>
                                 <!-- <div class="mb-3 form-check">
                                     <input type="checkbox" class="form-check-input" id="exampleCheck1">
