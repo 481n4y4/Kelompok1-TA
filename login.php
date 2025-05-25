@@ -36,11 +36,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <!-- Bagian kanan -->
     <div class="right-box">
       <form method="post">
+        <h2 style="color: white;">Login</h2>
         <?php if (!empty($error)) echo "<p style='color:red;'>$error</p>"; ?>
         <input type="text" name="username" placeholder="Username" required>
         <input type="password" name="password" placeholder="Password" required>
-
-
         <button type="submit" class="btn">Login</button>
         <p class="login-link">Don't have an account? <a href="register.php">Sign up here</a></p>
       </form>

@@ -21,18 +21,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <body>
   <div class="container">
     <div class="left-box">
-      <div class="logo">YOUR LOGO</div>
+      <div class="logo">Tech Com</div>
       <h1>Hello,<br>register now!</h1>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nisi risus.</p>
     </div>
     <div class="right-box">
       <form method="post">
-          <h2>Register</h2>
+          <h2 style="color: white;">Register</h2>
           <?php if (!empty($error)) echo "<p style='color:red;'>$error</p>"; ?>
           <input type="text" name="username" placeholder="Username" required>
           <input type="password" name="password" placeholder="Password" required>
-          <button type="submit">Daftar</button>
-          <a href="login.php">Sudah punya akun? Login</a>
+        <button type="submit" class="btn">Register</button>
+        <p class="login-link">Already have an account? <a href="login.php">Login here</a></p>
       </form>
     </div>
   </div>
