@@ -46,4 +46,29 @@ function update_barang($post)
 
     return mysqli_affected_rows($db);
 }
+
+function tambahProduk($post)
+{
+    global $db;
+
+    $nama       = mysqli_real_escape_string($db, $post['nama_produk']);
+    $kategori   = mysqli_real_escape_string($db, $post['kategori']);
+    $stok       = (int)$post['stok'];
+    $harga_beli = (int)$post['harga_beli'];
+    $harga_jual = (int)$post['harga_jual'];
+    $supplier   = mysqli_real_escape_string($db, $post['supplier']);
+    $tgl_masuk  = mysqli_real_escape_string($db, $post['tanggal_masuk']);
+
+    $query = "INSERT INTO produk (nama, kategori, stok, harga_beli, harga_jual, supplier, tgl_masuk) 
+              VALUES ('$nama', '$kategori', $stok, $harga_beli, $harga_jual, '$supplier', '$tgl_masuk')";
+
+    mysqli_query($db, $query);
+
+    if (mysqli_error($db)) {
+        echo "Query Error: " . mysqli_error($db);
+    }
+
+    return mysqli_affected_rows($db);
+}
+
 ?>
