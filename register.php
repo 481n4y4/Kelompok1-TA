@@ -16,7 +16,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 ?>
 
-<link rel="stylesheet" href="css/register.css">
+<link rel="stylesheet" href="./css/register.css">
 
 <body>
   <div class="container">
@@ -26,15 +26,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nisi risus.</p>
     </div>
     <div class="right-box">
-      <form action="register_process.php" method="POST">
-        <input type="text" name="fullname" placeholder="Full name" required>
-        <input type="email" name="email" placeholder="Email address" required>
-        <input type="password" name="password" placeholder="Password" required>
-        <input type="password" name="confirm_password" placeholder="Confirm Password" required>
-        <button type="submit" class="btn">Register</button>
-        <p class="login-link">Already have an account? <a href="login.php">Login here</a></p>
+      <form method="post">
+          <h2>Register</h2>
+          <?php if (!empty($error)) echo "<p style='color:red;'>$error</p>"; ?>
+          <input type="text" name="username" placeholder="Username" required>
+          <input type="password" name="password" placeholder="Password" required>
+          <button type="submit">Daftar</button>
+          <a href="login.php">Sudah punya akun? Login</a>
       </form>
     </div>
   </div>
 </body>
-
