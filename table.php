@@ -1,19 +1,8 @@
 <?php
-include 'database.php';
-
-function select($query)
-{
-    global $db;
-    $result = mysqli_query($db, $query);
-    $rows = [];
-
-    while ($row = mysqli_fetch_assoc($result)) {
-        $rows[] = $row;
-    }
-    return $rows;
-}
+require_once 'config/controller.php'; 
 
 $data_barang = select("SELECT * FROM produk");
+
 ?>
 
 <?php include "layout/header.php"; ?>
@@ -24,7 +13,7 @@ $data_barang = select("SELECT * FROM produk");
     <meta charset="UTF-8">
     <title>Data Barang</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     </style> 
     <!-- Styles -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -42,15 +31,15 @@ $data_barang = select("SELECT * FROM produk");
                 <h6 class="text-center">DATA BARANG</h6>
                 
                 <div class="table-responsive">
-                    <table class="table">
+                    <table class="table">   
                         <thead>
                             <tr>
                                 <th scope="col">No</th>
                                 <th scope="col">Nama Produk</th>
                                 <th scope="col">Kategori</th>
                                 <th scope="col">Stok</th>
-                                <th scope="col">Harga Jual</th>
                                 <th scope="col">Harga Beli</th>
+                                <th scope="col">Harga Jual</th>
                                 <th scope="col">Supplier</th>
                                 <th scope="col">Tanggal Masuk</th>
                                 <th scope="col">Aksi</th>
@@ -69,9 +58,9 @@ $data_barang = select("SELECT * FROM produk");
                                     <td><?= $produk['supplier']; ?></td>
                                     <td><?= $produk['tgl_masuk']; ?></td>
                                     <td width="15%" class="text-center">
-                                        <button type="button" class="btn-edit">
+                                        <a href="form-edit.php?id_barang=<?= $produk['id_barang']; ?>" class="btn btn-edit">
                                             Edit
-                                        </button>
+                                        </a>
                                         <button type="button" class="btn-delete">
                                             Hapus
                                         </button>
