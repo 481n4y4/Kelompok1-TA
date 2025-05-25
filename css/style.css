@@ -1,6 +1,6 @@
 /********** Template CSS **********/
 :root {
-  --primary: #eb1616;
+  --primary: #9361f9;
   --secondary: #191c24;
   --light: #6c7293;
   --dark: #000000;
@@ -118,7 +118,7 @@
 .sidebar .navbar .navbar-nav .nav-link {
   padding: 7px 20px;
   color: var(--light);
-  font-weight: 500;
+  font-weight: 500; 
   border-left: 3px solid var(--secondary);
   border-radius: 0 30px 30px 0;
   outline: none;
