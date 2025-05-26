@@ -24,11 +24,25 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <link rel="stylesheet" href="./css/register.css">
 
-<form method="post">
-    <h2>Login</h2>
-    <?php if (!empty($error)) echo "<p style='color:red;'>$error</p>"; ?>
-    <input type="text" name="username" placeholder="Username" required>
-    <input type="password" name="password" placeholder="Password" required>
-    <button type="submit">Login</button>
-    <a href="register.php">Belum punya akun? Register</a>
-</form>
+<body>
+  <div class="container">
+    <!-- Bagian kiri -->
+    <div class="left-box">
+      <div class="logo">Tech Com</div>
+      <h1>Hello,<br>welcome!</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nisi risus.</p>
+    </div>
+
+    <!-- Bagian kanan -->
+    <div class="right-box">
+      <form method="post">
+        <h2 style="color: white;">Login</h2>
+        <?php if (!empty($error)) echo "<p style='color:red;'>$error</p>"; ?>
+        <input type="text" name="username" placeholder="Username" required>
+        <input type="password" name="password" placeholder="Password" required>
+        <button type="submit" class="btn">Login</button>
+        <p class="login-link">Don't have an account? <a href="register.php">Sign up here</a></p>
+      </form>
+    </div>
+  </div>
+</body>
