@@ -23,7 +23,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <div class="left-box">
       <div class="logo">Tech Com</div>
       <h1>Hello,<br>register now!</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nisi risus.</p>
     </div>
     <div class="right-box">
       <form method="post">
