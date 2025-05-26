@@ -3,7 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
@@ -52,6 +52,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #000;
 }
 
 form {
@@ -94,6 +95,7 @@ form input:focus {
   margin-top: 15px;
   font-size: 14px;
   text-align: center;
+  color: white;
 }
 
 .login-link a {
