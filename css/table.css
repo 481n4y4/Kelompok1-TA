@@ -31,7 +31,7 @@
 }
 
 .btn-delete {
-    background-color: #dc3545; /* Merah */
+    background-color: #9361f9; /* Merah */
     color: white;
     border: none;
     padding: 6px 12px;
@@ -44,5 +44,5 @@
 }
 
 .btn-delete:hover {
-    background-color: #c82333;
+    background-color: #9361f9;
 }
