@@ -61,9 +61,9 @@ $data_barang = select("SELECT * FROM produk");
                                         <a href="form-edit.php?id_barang=<?= $produk['id_barang']; ?>" class="btn btn-edit">
                                             Edit
                                         </a>
-                                        <button type="button" class="btn-delete">
+                                        <a href="hapus-barang.php?id_barang=<?= $produk['id_barang']; ?>" class="btn btn-danger">
                                             Hapus
-                                        </button>
+                                        </a>
                                     </td>
                                 </tr>
                             <?php endforeach; ?>

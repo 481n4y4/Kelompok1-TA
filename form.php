@@ -6,7 +6,7 @@ if (isset($_POST['tambah'])) {
         echo "<script>
                 alert('Data berhasil ditambahkan!');
                 window.location.href = 'table.php';
-              </script>";
+                </script>";
         exit;
     } else {
         echo "<script>alert('Gagal menambahkan data.');</script>";

@@ -71,4 +71,16 @@ function tambahProduk($post)
     return mysqli_affected_rows($db);
 }
 
+function delete_barang($id_barang)
+{
+    global $db;
+
+    $query = "DELETE FROM produk WHERE id_barang = $id_barang";
+
+    mysqli_query($db, $query);
+
+    return mysqli_affected_rows($db);
+}
+
+
 ?>
