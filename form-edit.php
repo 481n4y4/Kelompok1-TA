@@ -117,7 +117,7 @@ if (isset($_POST['edit'])) {
                             placeholder="Pilih tanggal & waktu" required>
                     </div>
 
-                    <button type="submit" name="edit" class="btn btn-danger">Simpan Perubahan</button>
+                    <button type="submit" name="edit" class="btn btn-save">Simpan Perubahan</button>
                 </form>
             </div>
         </div>

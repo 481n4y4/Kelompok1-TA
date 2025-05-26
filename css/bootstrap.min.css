@@ -1841,7 +1841,7 @@ progress {
   background-color: #000;
   border-color: #f58b8b;
   outline: 0;
-  box-shadow: 0 0 0 0.25rem rgba(235, 22, 22, 0.25);
+  box-shadow: 0 0 0 0.25rem #49307b;
 }
 .form-control::-webkit-date-and-time-value {
   height: 1.5em;
@@ -2549,20 +2549,20 @@ fieldset:disabled .btn {
 }
 .btn-primary {
   color: #fff;
-  background-color: #eb1616;
-  border-color: #eb1616;
+  background-color: #9361f9;
+  border-color: #9361f9;
 }
 .btn-primary:hover {
   color: #fff;
-  background-color: #c81313;
-  border-color: #bc1212;
+  background-color: #9361f9;
+  border-color: #9361f9;
 }
 .btn-check:focus + .btn-primary,
 .btn-primary:focus {
   color: #fff;
-  background-color: #c81313;
-  border-color: #bc1212;
-  box-shadow: 0 0 0 0.25rem rgba(238, 57, 57, 0.5);
+  background-color: #9361f9;
+  border-color: #9361f9;
+  box-shadow: 0 0 0 0.25rem #9361f9;
 }
 .btn-check:checked + .btn-primary,
 .btn-check:active + .btn-primary,
@@ -2741,6 +2741,11 @@ fieldset:disabled .btn {
   color: #000;
   background-color: #ffc107;
   border-color: #ffc107;
+}
+.btn-save {
+  color: #fff;
+  background-color: #9361f9;
+  border-color: #9361f9;
 }
 .btn-danger {
   color: #fff;

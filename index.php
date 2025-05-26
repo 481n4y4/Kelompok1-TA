@@ -57,6 +57,35 @@ if (isset($_GET['hapus']) && $_GET['hapus'] === 'berhasil') {
 </head>
 <body>
 
+<!-- Sales Chart Start -->
+        <div class="container-fluid pt-4 px-4">
+          <div class="row g-4">
+            <div class="col-sm-12 col-xl-6">
+              <div class="bg-secondary text-center rounded p-4">
+                <div
+                  class="d-flex align-items-center justify-content-between mb-4"
+                >
+                  <h6 class="mb-0">Grafik Penjualan</h6>
+                  <a href="">Show All</a>
+                </div>
+                <canvas id="salse-revenue"></canvas>
+              </div>
+            </div>
+            <div class="col-sm-12 col-md-6">
+              <div class="h-100 bg-secondary rounded p-4">
+                <div
+                  class="d-flex align-items-center justify-content-between mb-4"
+                >
+                  <h6 class="mb-0">Calender</h6>
+                  <a href="">Show All</a>
+                </div>
+                <div id="calender"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Sales Chart End -->
+
 <!-- Table Start -->
 <div class="container-fluid pt-4 px-4">
     <div class="row g-4">
@@ -126,34 +155,7 @@ function showToast(message) {
 }
 </script>
 
-<!-- Sales Chart Start -->
-        <div class="container-fluid pt-4 px-4">
-          <div class="row g-4">
-            <div class="col-sm-12 col-xl-6">
-              <div class="bg-secondary text-center rounded p-4">
-                <div
-                  class="d-flex align-items-center justify-content-between mb-4"
-                >
-                  <h6 class="mb-0">Grafik Penjualan</h6>
-                  <a href="">Show All</a>
-                </div>
-                <canvas id="salse-revenue"></canvas>
-              </div>
-            </div>
-            <div class="col-sm-12 col-md-6">
-              <div class="h-100 bg-secondary rounded p-4">
-                <div
-                  class="d-flex align-items-center justify-content-between mb-4"
-                >
-                  <h6 class="mb-0">Calender</h6>
-                  <a href="">Show All</a>
-                </div>
-                <div id="calender"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- Sales Chart End -->        
+        
 
         
 <?php
