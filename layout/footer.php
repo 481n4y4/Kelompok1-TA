@@ -42,13 +42,13 @@
           labels: ["2019", "2020", "2021", "2022", "2023", "2024", "2025"],
           datasets: [
             {
-              label: "Salse",
+              label: "Penjualan",
               data: [15, 30, 55, 45, 70, 65, 85],
               backgroundColor: "#9361f9",
               fill: true,
             },
             {
-              label: "Revenue",
+              label: "Pendapatan",
               data: [99, 135, 170, 130, 190, 180, 270],
               backgroundColor: "rgb(255, 0, 200)",
               fill: true,
