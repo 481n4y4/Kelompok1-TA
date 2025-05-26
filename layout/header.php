@@ -58,6 +58,7 @@ require_once 'config/controller.php';
                     <a href="index.php" class="nav-item nav-link"><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
                     <a href="form.php" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>Form Tambah</a>
                     <a href="table.php" class="nav-item nav-link"><i class="fa fa-table me-2"></i>Tables</a>
+                    <a href="logout.php" class="nav-item nav-link"><i class="fa fa-right-from-bracket me-2"></i>Logout</a>
                 </div>
             </nav>
         </div>
@@ -75,9 +76,6 @@ require_once 'config/controller.php';
                 </a>
                 <form class="d-none d-md-flex ms-4">
                     <input class="form-control bg-dark border-0" type="search" placeholder="Search">
-                </form>
-                <form>
-                    <a href="logout.php">Logout</a>
                 </form>
             </nav>
             <!-- Navbar End -->
