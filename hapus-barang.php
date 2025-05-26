@@ -16,3 +16,7 @@ if (delete_barang($id_barang) > 0) {
             document.location.href = 'index.php';
           </script>";
 }
+
+// Setelah berhasil hapus
+header("Location: table.php?hapus=berhasil");
+exit;

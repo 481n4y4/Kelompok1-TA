@@ -7,18 +7,17 @@ $produk = select("SELECT * FROM produk WHERE id_barang = $id_barang")[0];
 if (isset($_POST['edit'])) {
     if (update_barang($_POST) > 0) {
         echo "<script>
-            window.onload = function() {
-            showToast('Data Barang Berhasil Diubah');
-            setTimeout(function() {
-            window.location.href = 'table.php';
-            }, 3000);
-        };
+            document.addEventListener('DOMContentLoaded', function () {
+                showToast('Data barang berhasil diubah!');
+                setTimeout(function () {
+                    window.location.href = 'table.php?edit=berhasil';
+                }, 3000);
+            });
         </script>";
-
     } else {
         echo "<script>
             alert('Data Barang Gagal Diubah');
-            document.location.href = 'table.php';
+            window.location.href = 'table.php';
         </script>";
     }
 }
@@ -39,25 +38,24 @@ if (isset($_POST['edit'])) {
     .flatpickr-calendar {
         z-index: 9999;
     }
+
     .toast {
         visibility: hidden;
         min-width: 300px;
-        max-width: 500px;
-        margin: auto;
-        background-color: #191c24;
-        color: #ff4c4c;
+        background-color: #333;
+        color: #fff;
         text-align: center;
         border-radius: 10px;
-        padding: 16px;
+        padding: 16px 24px;
         position: fixed;
         z-index: 9999;
-        top: 50%;
         left: 50%;
-        transform: translate(-50%, -50%);
-        font-size: 1.2rem;
-        box-shadow: 0 0 10px #ff4c4c77;
+        top: 30px;
+        transform: translateX(-50%);
+        font-size: 16px;
         opacity: 0;
-        transition: opacity 0.5s ease-in-out;
+        transition: opacity 0.5s ease, visibility 0.5s ease;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
     }
 
     .toast.show {
@@ -137,7 +135,7 @@ if (isset($_POST['edit'])) {
 </script>
 
 <!-- Toast Notification -->
-<div id="toast" class="toast">Data barang berhasil diubah!</div>
+<div id="toast" class="toast"></div>
 
 <script>
 function showToast(message) {
@@ -147,7 +145,7 @@ function showToast(message) {
 
     setTimeout(() => {
         toast.classList.remove("show");
-    }, 3000); // hilang setelah 3 detik
+    }, 3000);
 }
 </script>
 

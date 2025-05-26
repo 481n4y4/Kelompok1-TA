@@ -105,9 +105,8 @@ $data_barang = select("SELECT * FROM produk");
             </div>
           </div>
         </div>
-        <!-- Sales Chart End -->        
-
-        
+        <!-- Sales Chart End -->     
+         
 <?php
 include "layout/footer.php"
 ?>
