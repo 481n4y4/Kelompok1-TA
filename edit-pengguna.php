@@ -1,23 +1,24 @@
 <?php 
 include "layout/header.php"; 
+require_once 'config/controller.php';
 
-$id_barang = (int)$_GET['id_barang'];
-$produk = select("SELECT * FROM produk WHERE id_barang = $id_barang")[0];
+$id = isset($_GET['id']) ? (int)$_GET['id'] : 0;
+$pengguna = select("SELECT * FROM pengguna WHERE id = $id")[0] ?? [];
 
 if (isset($_POST['edit'])) {
-    if (update_barang($_POST) > 0) {
+    if (update_pengguna($_POST) > 0) {
         echo "<script>
             document.addEventListener('DOMContentLoaded', function () {
-                showToast('Data barang berhasil diubah!');
+                showToast('Data pengguna berhasil diubah!');
                 setTimeout(function () {
-                    window.location.href = 'table.php?edit=berhasil';
+                    window.location.href = 'pengguna.php?edit=berhasil';
                 }, 3000);
             });
         </script>";
     } else {
         echo "<script>
-            alert('Data Barang Gagal Diubah');
-            window.location.href = 'table.php';
+            alert('Data Pengguna Gagal Diubah');
+            window.location.href = 'pengguna.php';
         </script>";
     }
 }
@@ -26,7 +27,7 @@ if (isset($_POST['edit'])) {
 <!-- Flatpickr Styles -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
 <style>
-    .flatpickr-input {
+    .flatpickr-input, .form-select, .form-control {
         background-color: #000; 
         color: #fff; 
         border: 1px solid #6c757d; 
@@ -68,52 +69,42 @@ if (isset($_POST['edit'])) {
     <div class="row g-4">
         <div class="col-12">
             <div class="bg-secondary rounded h-100 p-4">
-                <h5 class="text-center mb-4">EDIT DATA BARANG</h5>
+                <h5 class="text-center mb-4">EDIT DATA PENGGUNA</h5>
                 <form action="" method="POST">
-                    
-                    <input type="hidden" name="id_barang" value="<?= $produk['id_barang']; ?>">
+
+                    <input type="hidden" name="id" value="<?= htmlspecialchars($pengguna['id'] ?? '') ?>">
 
                     <div class="mb-3">
-                        <label for="nama" class="form-label">Nama Produk</label>
-                        <input type="text" class="form-control" id="nama" name="nama" 
-                            value="<?= $produk['nama']; ?>" placeholder="Nama barang..." required>
+                        <label for="nama_lengkap" class="form-label">Nama Lengkap</label>
+                        <input type="text" class="form-control" id="nama_lengkap" name="nama_lengkap" 
+                            value="<?= htmlspecialchars($pengguna['nama_lengkap'] ?? '') ?>" required>
                     </div>
 
                     <div class="mb-3">
-                        <label for="kategori" class="form-label">Kategori</label>
-                        <input type="text" class="form-control" id="kategori" name="kategori" 
-                            value="<?= $produk['kategori']; ?>" required>
+                        <label for="username" class="form-label">Username</label>
+                        <input type="text" class="form-control" id="username" name="username" 
+                            value="<?= htmlspecialchars($pengguna['username'] ?? '') ?>" required>
                     </div>
 
                     <div class="mb-3">
-                        <label for="stok" class="form-label">Stok</label>
-                        <input type="text" class="form-control" id="stok" name="stok" 
-                            value="<?= $produk['stok']; ?>" required>
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" name="email" 
+                            value="<?= htmlspecialchars($pengguna['email'] ?? '') ?>" required>
                     </div>
 
                     <div class="mb-3">
-                        <label for="harga_jual" class="form-label">Harga Jual</label>
-                        <input type="text" class="form-control" id="harga_jual" name="harga_jual" 
-                            value="<?= $produk['harga_jual']; ?>" required>
+                        <label for="level" class="form-label">Level</label>
+                        <select class="form-select" id="level" name="level" required>
+                            <option value="admin" <?= ($pengguna['level'] ?? '') === 'admin' ? 'selected' : '' ?>>Admin</option>
+                            <option value="user" <?= ($pengguna['level'] ?? '') === 'user' ? 'selected' : '' ?>>User</option>
+                        </select>
                     </div>
 
                     <div class="mb-3">
-                        <label for="harga_beli" class="form-label">Harga Beli</label>
-                        <input type="text" class="form-control" id="harga_beli" name="harga_beli" 
-                            value="<?= $produk['harga_beli']; ?>" required>
-                    </div>
-
-                    <div class="mb-3">
-                        <label for="supplier" class="form-label">Supplier</label>
-                        <input type="text" class="form-control" id="supplier" name="supplier" 
-                            value="<?= $produk['supplier']; ?>" required>
-                    </div>
-
-                    <div class="mb-3">
-                        <label for="tgl_masuk" class="form-label">Tanggal Masuk</label>
-                        <input type="text" id="tgl_masuk" name="tgl_masuk" 
+                        <label for="tanggal_buat" class="form-label">Tanggal Buat</label>
+                        <input type="text" id="tanggal_buat" name="tanggal_buat" 
                             class="flatpickr-input" 
-                            value="<?= $produk['tgl_masuk']; ?>" 
+                            value="<?= htmlspecialchars($pengguna['tanggal_buat'] ?? '') ?>" 
                             placeholder="Pilih tanggal & waktu" required>
                     </div>
 
@@ -127,7 +118,7 @@ if (isset($_POST['edit'])) {
 <!-- Flatpickr Script -->
 <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 <script>
-    flatpickr("#tgl_masuk", {
+    flatpickr("#tanggal_buat", {
         enableTime: true,
         dateFormat: "Y-m-d H:i:S",
         time_24hr: true
@@ -136,7 +127,6 @@ if (isset($_POST['edit'])) {
 
 <!-- Toast Notification -->
 <div id="toast" class="toast"></div>
-
 <script>
 function showToast(message) {
     const toast = document.getElementById("toast");

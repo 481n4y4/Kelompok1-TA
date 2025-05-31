@@ -82,5 +82,28 @@ function delete_barang($id_barang)
     return mysqli_affected_rows($db);
 }
 
+function delete_users($id) {
+    global $db;
+    $id = mysqli_real_escape_string($db, $id);
+    $query = "DELETE FROM users WHERE id = $id";
+    mysqli_query($db, $query);
+    return mysqli_affected_rows($db);
+}
+
+function delete_pengguna($id) {
+    global $db;
+
+    $id = mysqli_real_escape_string($db, $id);
+    $query = "DELETE FROM pengguna WHERE id = $id";
+
+    mysqli_query($db, $query);
+
+    if (mysqli_error($db)) {
+        echo "Query Error: " . mysqli_error($db);
+    }
+
+    return mysqli_affected_rows($db);
+}
+
 
 ?>

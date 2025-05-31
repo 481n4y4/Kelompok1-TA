@@ -56,6 +56,8 @@ require_once 'config/controller.php';
                 </a>
                 <div class="navbar-nav w-100">
                     <a href="index.php" class="nav-item nav-link"><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
+                    <a href="anggota.php" class="nav-item nav-link"><i class="fa fa-users me-2"></i>Daftar Anggota</a>
+                    <a href="pengguna.php" class="nav-item nav-link"><i class="fa fa-user-circle me-2"></i>Daftar Pengguna</a>
                     <a href="form.php" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>Form Tambah</a>
                     <a href="table.php" class="nav-item nav-link"><i class="fa fa-table me-2"></i>Tables</a>
                     <a href="logout.php" class="nav-item nav-link"><i class="fa fa-sign-out-alt me-2"></i>Logout</a>
